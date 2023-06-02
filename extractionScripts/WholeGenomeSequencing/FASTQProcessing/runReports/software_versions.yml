@@ -1,0 +1,42 @@
+APPLYBQSR:
+  gatk4: 4.2.6.1
+BASERECALIBRATOR:
+  gatk4: 4.2.6.1
+BCFTOOLS_STATS:
+  bcftools: 1.15.1
+CNNSCOREVARIANTS:
+  gatk4: 4.2.6.1
+CREATE_INTERVALS_BED:
+  gawk: 5.1.0
+CUSTOM_DUMPSOFTWAREVERSIONS:
+  python: 3.10.5
+  yaml: '6.0'
+FILTERVARIANTTRANCHES:
+  gatk4: 4.2.6.1
+GATHERBQSRREPORTS:
+  gatk4: 4.2.6.1
+HAPLOTYPECALLER:
+  gatk4: 4.2.6.1
+INDEX_CRAM:
+  samtools: 1.15.1
+MERGE_CRAM:
+  samtools: 1.15.1
+MERGE_HAPLOTYPECALLER:
+  gatk4: 4.2.6.1
+MOSDEPTH:
+  mosdepth: 0.3.3
+SAMTOOLS_STATS:
+  samtools: 1.15.1
+SNPEFF:
+  snpeff: 5.1d
+TABIX_BGZIPTABIX_INTERVAL_SPLIT:
+  tabix: '1.12'
+TABIX_DBSNP:
+  tabix: '1.12'
+TABIX_KNOWN_SNPS:
+  tabix: '1.12'
+VCFTOOLS_TSTV_COUNT:
+  vcftools: 0.1.16
+Workflow:
+  Nextflow: 22.04.4
+  nf-core/sarek: '3.0'

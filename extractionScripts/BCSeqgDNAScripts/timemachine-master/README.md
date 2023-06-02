@@ -1,0 +1,2 @@
+This repository contains scripts used in ["Variability within rare cell states enables multiple paths towards drug resistance
+"(Emert et al. 2020)](https://www.biorxiv.org/content/10.1101/2020.03.18.996660v2) to identify and count barcode reads from targeted sequencing data. Please see the [Wiki](https://github.com/arjunrajlaboratory/timemachine/wiki) for step-by-step instructions on how to use these scripts. The sequencing data from the paper is available [here](https://www.dropbox.com/sh/mmeg3mckrpridu3/AAALBaMLoJsJiQC2-lrVY0Cva?dl=0). 

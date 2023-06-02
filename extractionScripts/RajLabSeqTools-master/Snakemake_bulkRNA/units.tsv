@@ -1,0 +1,7 @@
+sample	unit	fq1	fq2
+SRX5725609	sample	data/SRX5725609.fastq.gz
+SRX5725610	rep1	data/SRX5725610.fastq.gz
+SRX5725611	rep2	data/SRX5725611.fastq.gz
+SRX5725612	sample	data/SRX5725612.fastq.gz
+SRX5725613	rep1	data/SRX5725613.fastq.gz
+SRX5725614	rep2	data/SRX5725614.fastq.gz

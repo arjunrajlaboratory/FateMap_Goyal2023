@@ -1,0 +1,93 @@
+----------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~\
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/sarek v3.0
+----------------------------------------------------
+
+Run Name: zen_galileo
+
+## nf-core/sarek execution completed successfully! ##
+
+
+The workflow was completed at 2022-07-31T00:35:30.217821-05:00 (duration: 9h 12m 36s)
+
+The command used to launch the workflow was as follows:
+
+  nextflow run nf-core/sarek -r 3.0 -work-dir /projects/b1042/GoyalLab/bodkin/sarek/works -params-file nf-params.json -resume
+
+
+
+Pipeline Configuration:
+-----------------------
+ - revision: 3.0
+ - runName: zen_galileo
+ - containerEngine: singularity
+ - launchDir: /projects/p31666/bodkin/sarek
+ - workDir: /projects/b1042/GoyalLab/bodkin/sarek/works
+ - projectDir: /home/nlb1342/.nextflow/assets/nf-core/sarek
+ - userName: nlb1342
+ - profile: standard
+ - configFiles: /home/nlb1342/.nextflow/assets/nf-core/sarek/nextflow.config, /projects/p31666/bodkin/sarek/nextflow.config
+ - step: prepare_recalibration
+ - input: /projects/b1042/GoyalLab/bodkin/sarek/output/csv/markduplicates_no_table.csv
+ - outdir: /projects/b1042/GoyalLab/bodkin/sarek/output
+ - intervals: /projects/genomicsshare/AWS_iGenomes/references/Homo_sapiens/GATK/GRCh38/Annotation/intervals/wgs_calling_regions.hg38.bed
+ - tools: haplotypecaller,snpeff
+ - pon: s3://ngi-igenomes/igenomes//Homo_sapiens/GATK/GRCh38/Annotation/GATKBundle/1000g_pon.hg38.vcf.gz
+ - pon_tbi: s3://ngi-igenomes/igenomes//Homo_sapiens/GATK/GRCh38/Annotation/GATKBundle/1000g_pon.hg38.vcf.gz.tbi
+ - ascat_genome: hg38
+ - ascat_alleles: s3://ngi-igenomes/igenomes//Homo_sapiens/GATK/GRCh38/Annotation/ASCAT/G1000_alleles_hg38.zip
+ - ascat_loci: s3://ngi-igenomes/igenomes//Homo_sapiens/GATK/GRCh38/Annotation/ASCAT/G1000_loci_hg38.zip
+ - ascat_loci_gc: s3://ngi-igenomes/igenomes//Homo_sapiens/GATK/GRCh38/Annotation/ASCAT/GC_G1000_hg38.zip
+ - ascat_loci_rt: s3://ngi-igenomes/igenomes//Homo_sapiens/GATK/GRCh38/Annotation/ASCAT/RT_G1000_hg38.zip
+ - bwa: /projects/genomicsshare/AWS_iGenomes/references/Homo_sapiens/GATK/GRCh38/Sequence/BWAIndex/
+ - bwamem2: s3://ngi-igenomes/igenomes//Homo_sapiens/GATK/GRCh38/Sequence/BWAmem2Index/
+ - chr_dir: /projects/genomicsshare/AWS_iGenomes/references/Homo_sapiens/GATK/GRCh38/Sequence/Chromosomes
+ - dbsnp: /projects/genomicsshare/AWS_iGenomes/references/Homo_sapiens/GATK/GRCh38/Annotation/GATKBundle/dbsnp_146.hg38.vcf.gz
+ - dbsnp_tbi: /projects/genomicsshare/AWS_iGenomes/references/Homo_sapiens/GATK/GRCh38/Annotation/GATKBundle/dbsnp_146.hg38.vcf.gz.tbi
+ - dbsnp_vqsr: --resource:dbsnp,known=false,training=true,truth=false,prior=2.0 dbsnp_146.hg38.vcf.gz
+ - dict: /projects/genomicsshare/AWS_iGenomes/references/Homo_sapiens/GATK/GRCh38/Sequence/WholeGenomeFasta/Homo_sapiens_assembly38.dict
+ - dragmap: s3://ngi-igenomes/igenomes//Homo_sapiens/GATK/GRCh38/Sequence/dragmap/
+ - fasta: /projects/genomicsshare/AWS_iGenomes/references/Homo_sapiens/GATK/GRCh38/Sequence/WholeGenomeFasta/Homo_sapiens_assembly38.fasta
+ - fasta_fai: /projects/genomicsshare/AWS_iGenomes/references/Homo_sapiens/GATK/GRCh38/Sequence/WholeGenomeFasta/Homo_sapiens_assembly38.fasta.fai
+ - germline_resource: s3://ngi-igenomes/igenomes//Homo_sapiens/GATK/GRCh38/Annotation/GATKBundle/af-only-gnomad.hg38.vcf.gz
+ - germline_resource_tbi: s3://ngi-igenomes/igenomes//Homo_sapiens/GATK/GRCh38/Annotation/GATKBundle/af-only-gnomad.hg38.vcf.gz.tbi
+ - known_indels: /projects/genomicsshare/AWS_iGenomes/references/Homo_sapiens/GATK/GRCh38/Annotation/GATKBundle/{Mills_and_1000G_gold_standard.indels.hg38,beta/Homo_sapiens_assembly38.known_indels}.vcf.gz
+ - known_indels_tbi: /projects/genomicsshare/AWS_iGenomes/references/Homo_sapiens/GATK/GRCh38/Annotation/GATKBundle/{Mills_and_1000G_gold_standard.indels.hg38,beta/Homo_sapiens_assembly38.known_indels}.vcf.gz.tbi
+ - known_indels_vqsr: --resource:gatk,known=false,training=true,truth=true,prior=10.0 Homo_sapiens_assembly38.known_indels.vcf.gz --resource:mills,known=false,training=true,truth=true,prior=10.0 Mills_and_1000G_gold_standard.indels.hg38.vcf.gz
+ - known_snps: /projects/genomicsshare/AWS_iGenomes/references/Homo_sapiens/GATK/GRCh38/Annotation/GATKBundle/1000G_omni2.5.hg38.vcf.gz
+ - known_snps_tbi: /projects/genomicsshare/AWS_iGenomes/references/Homo_sapiens/GATK/GRCh38/Annotation/GATKBundle/1000G_omni2.5.hg38.vcf.gz.tbi
+ - known_snps_vqsr: --resource:1000G,known=false,training=true,truth=true,prior=10.0 1000G_omni2.5.hg38.vcf.gz
+ - mappability: /projects/genomicsshare/AWS_iGenomes/references/Homo_sapiens/GATK/GRCh38/Annotation/Control-FREEC/out100m2_hg38.gem
+ - snpeff_db: GRCh38.105
+ - snpeff_genome: GRCh38
+ - snpeff_version: 5.1
+ - vep_genome: GRCh38
+ - vep_species: homo_sapiens
+ - vep_cache_version: 106
+ - vep_version: 106.1
+ - igenomes_base: /projects/genomicsshare/AWS_iGenomes/references
+ - config_profile_description: Northwestern University Quest HPC (Genomics Nodes) config provided by nf-core/configs
+ - config_profile_contact: Rogan Grant / Janna Nugent (@RoganGrant, @NUjon)
+ - config_profile_url: https://www.it.northwestern.edu/research/user-services/quest/
+ - max_cpus: 36
+ - max_memory: 160 GB
+ - max_time: 2d
+ - email: nicholas.bodkin@northwestern.edu
+ - Date Started: 2022-07-30T15:22:53.976701-05:00
+ - Date Completed: 2022-07-31T00:35:30.217821-05:00
+ - Pipeline script file path: /home/nlb1342/.nextflow/assets/nf-core/sarek/main.nf
+ - Pipeline script hash ID: e3f1566408f19677bd01fba97a601922
+ - Pipeline repository Git URL: https://github.com/nf-core/sarek
+ - Pipeline repository Git Commit: 5bb160ddb2cee50c811585e450b16cba13c95a02
+ - Pipeline Git branch/tag: 3.0
+ - Nextflow Version: 22.04.4
+ - Nextflow Build: 5706
+ - Nextflow Compile Timestamp: 19-06-2022 20:51 UTC
+
+--
+nf-core/sarek
+https://github.com/nf-core/sarek
