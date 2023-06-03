@@ -495,7 +495,20 @@ fractionFinalClusters = bind_rows(finalFractionColonies,finalFractionRandom)
 fractionFinalClusters$type <- factor(fractionFinalClusters$type, levels=c("random", "colonies"))
 write.table(fractionFinalClusters, file=paste0(home1Directory,'FM01_fractionFinalClusters_snn08.tsv'), col.names = TRUE, sep='\t')
 
+### Get P Values
+library(rstatix)
+tempDirectory = "/Users/ygy1258/Dropbox (RajLab)/FateMap/paper/extractedData/10X_SeuratObject/FM01/"
+fractionFinalClusters = as_tibble(read.table(paste0(tempDirectory, 'FM01_fractionFinalClusters_snn08.tsv'), stringsAsFactors=F, header = T))
+fractionFinalClusters_colonies = fractionFinalClusters %>% filter(type == "colonies")
+fractionFinalClusters_random = fractionFinalClusters %>% filter(type == "random")
+
+
+wilcox.test (fractionFinalClusters_colonies$nfractionFinal,fractionFinalClusters_random$nfractionFinal)
+
+#PValue = p-value < 2.2e-16
+  
 summaryfractionFinalClusters = fractionFinalClusters %>% group_by(type) %>% summarise(mean = mean(nfractionFinal))
+
 
 plot = ggplot(fractionFinalClusters, aes(x = type, y=nfractionFinal, fill = as.factor(type)), show.legend = FALSE) + 
   geom_boxplot() +
